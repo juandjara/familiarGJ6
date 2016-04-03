@@ -1,4 +1,4 @@
-
+var $ = document.querySelector;
 var log_elem = $("#log");
   
 function getLocation(){
