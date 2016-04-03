@@ -6,9 +6,11 @@
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError);
     }else{
-      log_elem.html("Geolocation is not supported by this browser.");
+      log_elem.text("Geolocation is not supported by this browser.");
     }
   }
+
+  window.getLocation = getLocation;
 
   function onPositionSuccess(position){
     lat    = position.coords.latitude;
