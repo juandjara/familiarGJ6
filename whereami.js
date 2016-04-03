@@ -5,7 +5,7 @@ function getLocation(){
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError);
   }else{
-    log_elem.text("Geolocation is not supported by this browser.");
+    log_elem.textContent = "Geolocation is not supported by this browser.";
   }
 }
 
@@ -39,16 +39,16 @@ function onPositionSuccess(position){
 function onPositionError(error){
   switch(error.code){
     case error.PERMISSION_DENIED:
-      log_elem.text("User denied the request for Geolocation.");
+      log_elem.textContent = "User denied the request for Geolocation.";
       break;
     case error.POSITION_UNAVAILABLE:
-      log_elem.text("Location information is unavailable.");
+      log_elem.textContent = "Location information is unavailable.";
       break;
     case error.TIMEOUT:
-      log_elem.text("The request to get user location timed out.");
+      log_elem.textContent = "The request to get user location timed out.";
       break;
     case error.UNKNOWN_ERROR:
-      log_elem.text("An unknown error occurred.");
+      log_elem.textContent = "An unknown error occurred.";
       break;
   }
 }
