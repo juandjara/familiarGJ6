@@ -159,10 +159,14 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('deploy', function(){
+gulp.task('ghpages', function(){
   return gulp.src('./dist/**/*')
     .pipe($.ghPages())
 })
+
+gulp.task('deploy', ['ghpages'], () => {
+  gulp.start('clean');
+});
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));

@@ -2,7 +2,7 @@
 
   var log_elem = $("#log");
     
-  window.getLocation = function getLocation(){
+  function getLocation(){
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError);
     }else{
@@ -51,5 +51,7 @@
         break;
     }
   }
+  
+  getLocation();
 
 })
