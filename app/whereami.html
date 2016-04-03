@@ -13,42 +13,19 @@
       #map {
         height: 100%;
       }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
-    <style>
-      #floating-panel {
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        margin-left: -180px;
-        width: 350px;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-      }
-      #latlng {
-        width: 225px;
+      #log{
+        width: 100%;
+        font-size: 2em;
+        font-weight: bold;
+        padding: 1em;
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <div id="floating-panel">
-      <input id="latlng" type="text" value="40.714224,-73.961452">
-      <input id="submit" type="button" value="Reverse Geocode">
-    </div>
+    <header id="log">
+      Bienvenido a <em>Follow</em>!
+    </header>
     <div id="map"></div>
 
     <script src="whereami.js"></script>
@@ -99,7 +76,7 @@
     }
     */
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzimNk-WUWUOaTif0DubmcGY-nKd9XIXY&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzimNk-WUWUOaTif0DubmcGY-nKd9XIXY&signed_in=true&callback=getLocation"
         async defer></script>
 
   </body>
